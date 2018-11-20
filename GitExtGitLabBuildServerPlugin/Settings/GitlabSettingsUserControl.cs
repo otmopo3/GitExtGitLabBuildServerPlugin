@@ -16,8 +16,9 @@ namespace GitExtGitLabBuildServerPlugin.Settings
 		public GitlabSettingsUserControl()
 		{
 			InitializeComponent();
-		}
 
+			InitializeComplete();
+		}
 		
 		public void Initialize(string defaultProjectName, IEnumerable<string> remotes)
 		{
