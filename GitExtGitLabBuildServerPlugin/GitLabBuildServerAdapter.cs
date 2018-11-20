@@ -83,7 +83,9 @@ namespace GitExtGitLabBuildServerPlugin
 						break;
 
 					string commitSha = pipeline.Sha1.ToString().ToLowerInvariant();
-					if (!ObjectId.TryParse(commitSha, out ObjectId objectId))
+					ObjectId objectId;
+
+					if (!ObjectId.TryParse(commitSha, out objectId))
 						continue;
 
 					BuildInfo.BuildStatus status = ConvertBuildStatus(pipeline);
